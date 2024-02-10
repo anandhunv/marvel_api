@@ -1,10 +1,10 @@
 // Hide input box and container initially
-document.querySelector('.container').style.display = 'none';
+document.querySelector('.container').style.display = '';
 
 // Show input box and container after 3 seconds
 setTimeout(() => {
     document.querySelector('.container').style.display = 'block';
-}, 2500);
+}, 1000);
 
 
 let input=document.getElementById("input-box")
