@@ -77,12 +77,12 @@ button.addEventListener("click",(getResult= async()=>
     console.log(jsonData);
     jsonData.data["results"].forEach((element) => {
 
-        showContainer.innerHTML=`<div class="card-container"> 
-        <div class="container-character-image">
-        <img src="${element.thumbnail["path"] + "." +element.thumbnail["extension"]}"/></div>
-        <div class="character-name">${element.name}</div>  
-        <div class="character-description">${element.description}</div>
-        </div>`;
+            showContainer.innerHTML=`<div class="card-container"> 
+            <div class="container-character-image">
+            <img src="${element.thumbnail["path"] + "." +element.thumbnail["extension"]}"/></div>
+            <div class="character-name">${element.name}</div>  
+            <div class="character-description">${element.description}</div>
+            </div>`;
         // console.log(element.name);///
 
         
