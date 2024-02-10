@@ -308,7 +308,7 @@ p{
     align-items: center; */
     gap: 10px;
     background-color: rgba(0, 0, 0, 0); /* Set the background color with transparency */
-   padding-right:90px; 
+   /* padding-right:30px;  */
    
 }
 input{
@@ -318,6 +318,7 @@ input{
     border: none;
     border-radius: 0.5em;
     outline: none;
+    width: 150px;
 
 }
 
@@ -327,9 +328,9 @@ button{
     background-color: #ffffff;
     color: #000000;
     border-radius: 0.5em;
-    width: 40px;
+    width: 35px;
     height: 30px;
-    font-size: 12px;
+    font-size: 10px;
     
 
 }
@@ -388,3 +389,4 @@ button{
 }
 
 }
+
