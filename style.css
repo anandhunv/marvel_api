@@ -29,6 +29,20 @@
     border-radius: 1em;
     
 }
+.container {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 
 .input-container{
@@ -118,17 +132,23 @@ button{
     position: absolute;
     color: #fff;
     width: 64%;
-    background-color: #555;
+    background-color: rgba(0, 0, 0, 0); /* Set the background color with transparency */
     z-index: 1;
-
+    height:200px;
+    overflow-y: scroll;
 }
+.list::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
 
 .autocomplete-items{
     padding: 0.5em;
+    
 }
 .autocomplete-items:hover{
     /* background-color: #ddd; */
-    color: #171821;
+    color: #ff0000;
 }
 
 p{
@@ -272,7 +292,7 @@ p{
     /* display: flex;
     flex-direction: column;
     align-items: center; */
-    gap: 1em;
+    gap: 10px;
     background-color: rgba(0, 0, 0, 0); /* Set the background color with transparency */
    padding-right:90px; 
    
@@ -290,11 +310,12 @@ input{
 button{
     outline: none;
     border: none;
-    background-color: #e01a38;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     border-radius: 0.5em;
     width: 40px;
     height: 30px;
+    font-size: 12px;
     
 
 }
@@ -322,14 +343,34 @@ button{
 
 }
 .container-character-image img{
-    width: 78%;
+    width: 70%;
     position: relative;
     width: block;
     border-radius: 50%;
-        background-color: rgba(0, 0, 0, 0); /* Set the background color with transparency */
+    background-color: rgba(0, 0, 0, 0); /* Set the background color with transparency */
+    
+}
+.character-name{
+    padding: 0.5em;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0); /* Set the background color with transparency */
 
-    
-    
+
+}
+.character-description{
+    text-align: justify;
+    color: #ffffff;
+    line-height: 2em;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0); /* Set the background color with transparency */
+    font-size: 11px;
+
+
+
 }
 
 }

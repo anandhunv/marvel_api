@@ -1,3 +1,12 @@
+// Hide input box and container initially
+document.querySelector('.container').style.display = 'none';
+
+// Show input box and container after 3 seconds
+setTimeout(() => {
+    document.querySelector('.container').style.display = 'block';
+}, 2500);
+
+
 let input=document.getElementById("input-box")
 let button=document.getElementById("submit-button")
 let showContainer=document.getElementById("show-container");
@@ -22,6 +31,8 @@ function removeElements(){
     listContainer.innerHTML="";
 }
 
+    
+
 input.addEventListener("keyup",async()=>{
     removeElements();
     if(input.value.length < 2){
@@ -44,7 +55,8 @@ jsonData.data["results"].forEach((result) => {
     div.innerHTML=`<p class="item">${word}</p>`;
     listContainer.appendChild(div);
 });
-});
+})
+
 
 
 button.addEventListener("click",(getResult= async()=>
@@ -52,10 +64,8 @@ button.addEventListener("click",(getResult= async()=>
 {
     if(input.value.trim().length < 1){
         alert("Input Cannot be blank");
-        // let show=document.querySelector(".character-description");
-        // show.innerHTML="Input Cannot be blank";
-        showContainer.innerHTML="gt";
-
+        
+    
     }
     showContainer.innerHTML="";
     const url=`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hashVal}&name=${input.value}`;
